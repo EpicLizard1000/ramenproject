@@ -15,8 +15,7 @@
   <label for="allergies">Any allergies?</label><br>
   <input type="text" id="allergies" name="allergies"><br><br>
 
-  <label for="notes">Other notes:</label><br>
-  <textarea id="notes" name="notes" rows="4" cols="40"></textarea><br><br>
+
 
   <button type="submit">Send Response</button>
 </form>
@@ -27,13 +26,11 @@ function sendEmail(event) {
 
   const name = document.getElementById("name").value;
   const allergies = document.getElementById("allergies").value;
-  const notes = document.getElementById("notes").value;
 
   const subject = encodeURIComponent("Form Submission from " + name);
   const body = encodeURIComponent(
     "Name: " + name + "\n" +
-    "Allergies: " + allergies + "\n" +
-    "Other Notes: " + notes
+    "Allergies: " + allergies + "\n"
   );
 
   const mailtoLink = `mailto:leo.mettam@mallaighigh.org.uk?subject=${subject}&body=${body}`;

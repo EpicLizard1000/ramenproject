@@ -1,0 +1,32 @@
+html{
+    background-color: coral;
+}
+h1{
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+button {
+    background-color: black;
+    color: coral;
+    border-radius: 1000px;
+    padding: 10px 20px; 
+    border: none;
+    cursor: pointer;
+    display: block; 
+    margin-left: 0; 
+}
+p{
+    text-align: start;
+}
+a {
+    display: block;
+    text-align: center;
+    color: black;
+}
+
+img {
+  display: block;
+  margin: auto;
+}

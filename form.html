@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="formstyle.css">
+  <title>Ramen Selector</title>
+</head>
+<body>
+
+<h2>Ramen Selector</h2>
+
+<form onsubmit="sendEmail(event)">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="allergies">Any allergies?</label><br>
+  <input type="text" id="allergies" name="allergies"><br><br>
+
+  <label for="notes">Other notes:</label><br>
+  <textarea id="notes" name="notes" rows="4" cols="40"></textarea><br><br>
+
+  <button type="submit">Send Response</button>
+</form>
+
+<script>
+function sendEmail(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const allergies = document.getElementById("allergies").value;
+  const notes = document.getElementById("notes").value;
+
+  const subject = encodeURIComponent("Form Submission from " + name);
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Allergies: " + allergies + "\n" +
+    "Other Notes: " + notes
+  );
+
+  const mailtoLink = `mailto:leo.mettam@mallaighigh.org.uk?subject=${subject}&body=${body}`;
+  window.open(mailtoLink);
+}
+</script>
+
+</body>
+</html>
